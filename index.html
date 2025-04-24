@@ -4,101 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registro de Infracciones</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f0f1f6;
-      color: #333;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #2d3e50;
-    }
-
-    .botones, .vehiculos, .acciones {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    button {
-      font-size: 1rem;
-      padding: 15px;
-      border: none;
-      border-radius: 8px;
-      background-color: #3498db;
-      color: white;
-      cursor: pointer;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #2980b9;
-      transform: translateY(-2px);
-    }
-
-    button.activo {
-      background-color: #f39c12 !important;
-    }
-
-    .activo {
-      background-color: #f39c12 !important;
-    }
-
-    #historial {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    #historial h3 {
-      font-size: 1.5rem;
-      color: #2d3e50;
-      margin-bottom: 15px;
-    }
-
-    .registro {
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-      font-size: 1rem;
-      color: #444;
-    }
-
-    .registro:last-child {
-      border-bottom: none;
-    }
-
-    .acciones {
-      text-align: center;
-    }
-
-    .acciones button {
-      width: 150px;
-      font-size: 1rem;
-      padding: 12px;
-      background-color: #2ecc71;
-      border-radius: 8px;
-      color: white;
-      transition: background-color 0.3s ease;
-    }
-
-    .acciones button:hover {
-      background-color: #27ae60;
-    }
-  </style>
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
   <h1>Registro de Infracciones en Semáforo</h1>
@@ -108,8 +14,8 @@
     <button onclick="toggleInfraccion(this, 'Obstaculiza paso peatonal')">🚷 Peatones</button>
     <button onclick="toggleInfraccion(this, 'Se sube al andén')">🧱 Andén</button>
     <button onclick="toggleInfraccion(this, 'Giro en U prohibida')">🔄 U prohibida</button>
-    <button onclick="toggleInfraccion(this, 'Gira a la derecha')">➡️ Derecha</button>
     <button onclick="toggleInfraccion(this, 'Gira a la izquierda')">⬅️ Izquierda</button>
+    <button onclick="toggleInfraccion(this, 'Gira a la derecha')">➡️ Derecha</button>
     <button onclick="toggleInfraccion(this, 'Sigue recto')">⬆️ Recto</button>
   </div>
 
@@ -133,3 +39,7 @@
     <h3>Historial de Registros</h3>
     <div id="lista"></div>
   </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
